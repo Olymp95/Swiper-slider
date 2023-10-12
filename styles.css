@@ -1,0 +1,112 @@
+body {
+    background-color: #333; /* Темно-сірий фон основної сторінки */
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column; /* Змінено на вертикальний напрямок */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; 
+    width: 100%;
+    margin:  auto; 
+}
+
+/* Змінений стиль контейнера "slider-toggle" за замовчуванням */
+/* Змінений стиль контейнера "slider-toggle" за замовчуванням */
+.slider-toggle {
+    width: 800px;
+    height: 300px;
+    margin: 0 auto; /* Це розміщує контейнер посередині сторінки */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    transition: background-color 0.3s ease; /* Анімація для зміни фону */
+}
+
+/* Змінений стиль контейнера "slider-toggle" при активній другій кнопці */
+.slider-toggle.active2 {
+    background-color: darkgreen; /* Фон темно зелений при активній другій кнопці */
+}
+
+/* Змінений стиль контейнера "slider-toggle" при активній першій кнопці */
+.slider-toggle.active1 {
+    background-color: rgb(51, 51, 168); /* Фон темно синій при активній першій кнопці */
+}
+
+
+/* Загальні стилі для кнопок */
+.gdai-toggle-button {
+    padding: 20px 40px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background: #333;
+}
+
+/* Змінений стиль для активної кнопки */
+.gdai-toggle-button.active1 {
+    background-color: rgb(51, 168, 67);
+}
+
+/* Змінений стиль для активної кнопки */
+.gdai-toggle-button.active2 {
+    background-color: rgb(10, 14, 233);
+}
+
+.page-container{
+    width: 100%; /* Змінено ширину на 100% */
+    overflow: hidden; 
+    position: relative;
+    margin:  auto; /* Центрує слайдер на сторінці */
+}
+.swiper-container {
+    width: 1075px;
+    height: 430px;
+    position: relative;
+    margin: auto; /* Додано позицію relative */
+}
+#slider2 {
+    display: none;
+}
+
+.swiper-slide {
+    width: 1075px;
+    height: 430px;
+    background-color: #8B008B; /* Фіолетова заливка слайдів */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-content {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    
+}
+
+/* Стилізація кнопок навігації */
+.swiper-button-prev,
+.swiper-button-next {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="58" height="60" viewBox="0 0 58 60" fill="none"><g filter="url(%23filter0_d_1_479)"><circle cx="29" cy="29" r="29" fill="%2375B336"/></g><path d="M29 44C32.9782 44 36.7936 42.4196 39.6066 39.6066C42.4196 36.7936 44 32.9782 44 29C44 25.0218 42.4196 21.2064 39.6066 18.3934C36.7936 15.5804 32.9782 14 29 14C25.0218 14 21.2064 15.5804 18.3934 18.3934C15.5804 21.2064 14 25.0218 14 29C14 32.9782 15.5804 36.7936 18.3934 39.6066C21.2064 42.4196 25.0218 44 29 44V44ZM22.4375 29.9375C22.1889 29.9375 21.9504 29.8387 21.7746 29.6629C21.5988 29.4871 21.5 29.2486 21.5 29C21.5 28.7514 21.5988 28.5129 21.7746 28.3371C21.9504 28.1613 22.1889 28.0625 22.4375 28.0625L33.2994 28.0625L29.2738 24.0388C29.1866 23.9516 29.1174 23.8481 29.0703 23.7342C29.0231 23.6203 28.9988 23.4983 28.9988 23.375C28.9988 23.2517 29.0231 23.1297 29.0703 23.0158C29.1174 22.9019 29.1866 22.7984 29.2738 22.7112C29.3609 22.6241 29.4644 22.5549 29.5783 22.5078C29.6922 22.4606 29.8142 22.4363 29.9375 22.4363C30.0608 22.4363 30.1828 22.4606 30.2967 22.5078C30.4106 22.5549 30.5141 22.6241 30.6013 22.7112L36.2263 28.3363C36.3136 28.4233 36.3828 28.5268 36.4301 28.6407C36.4773 28.7546 36.5017 28.8767 36.5017 29C36.5017 29.1233 36.4773 29.2454 36.4301 29.3593C36.3828 29.4732 36.3136 29.5767 36.2263 29.6637L30.6013 35.2887C30.4252 35.4648 30.1865 35.5637 29.9375 35.5637C29.6885 35.5637 29.4498 35.4648 29.2738 35.2887C29.0977 35.1127 28.9988 34.874 28.9988 34.625C28.9988 34.376 29.0977 34.1373 29.2738 33.9612L33.2994 29.9375L22.4375 29.9375Z" fill="white"/><defs><filter id="filter0_d_1_479" x="0" y="0" width="58" height="60" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="2"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_479"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_479" result="shape"/></filter></defs></svg>');
+  height: 58px!important;
+  width: 58px!important;
+  position: absolute;
+
+}
+
+.swiper-button-prev {
+  transform: rotatey(180deg);
+  left:-60px !important;
+}
+.swiper-button-next {
+  right: -60px !important;
+}
+
+
